@@ -30,6 +30,9 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
@@ -43,13 +46,16 @@
         </div>
     </nav>
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead bg-primary text-white text-center" id="home">
         <div class="container">
             <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+            {% for x in projects %}{{ x }}{% endfor %}
             <h1 class="text-uppercase mb-0">Avatar</h1>
-            <p>Quick intro/about me text
+            <p> I'm John Lock, a Developer based in Rotterdam, NL. ...developer stuff/python... interested in. I have experience in wide range of testing disiplines. </p>
+            <p>I seek to use the power that software has to help address real world problems. Key to this is a data lead approach along with continuous feedback in all shapes and forms.</p>
+            <p>On this site you can find some example projects of mine, with an explaination and links to the source code. Please feel free to get in touch for any further information or if you have any questions.
                 <hr>
-                <h2 class="font-weight-light mb-0">Development - Testing - User Experience Designer</h2>
+                <h2 class="font-weight-light mb-0">Development - Testing - Words..</h2>
         </div>
     </header>
     <!-- Portfolio Grid Section -->
@@ -160,52 +166,117 @@
             <div id="HiddenContainer" style="display: none;">
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fas fa-expand-arrows-alt"></i>
+                        <div class="card" style="width: 18rem;">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
                                 </div>
+                                <img class="card-img-top" src="static/images/kanban1.png">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Polity</h5>
+                                <p class="card-text">An applicaiton for voting with integrated feedback to monitor choice satisfaction overtime</p>
                             </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Finance Tracker</h5>
-                            <p class="card-text">An app to monitor finance and todo tasks for a household</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fas fa-expand-arrows-alt"></i>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
                                 </div>
+                                <img class="card-img-top" src="static/images/kanban1.png">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Price Tracking Car thing</h5>
+                                <p class="card-text">Blurb</p>
                             </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Finance Tracker</h5>
-                            <p class="card-text">An app to monitor finance and todo tasks for a household</p>
                         </div>
                     </div>
-                </div><div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fas fa-expand-arrows-alt"></i>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
                                 </div>
+                                <img class="card-img-top" src="static/images/kanban1.png">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Portfolio</h5>
+                                <p class="card-text">A walkthrough of this portfolio itself, explaining how it works a simple CMS</p>
                             </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Finance Tracker</h5>
-                            <p class="card-text">An app to monitor finance and todo tasks for a household</p>
                         </div>
                     </div>
-                </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
+                                </div>
+                                <img class="card-img-top" src="static/images/kanban1.png">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">A2A</h5>
+                                <p class="card-text">Finding and Tracking good roads to drive</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
+                                </div>
+                                <img class="card-img-top" src="static/images/kanban1.png">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Stock Dash</h5>
+                                <p class="card-text">A dashboard for tracking stock information</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
+                                </div>
+                                <img class="card-img-top" src="static/images/kanban1.png">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Flask Skeleton</h5>
+                                <p class="card-text">A simple script to jumpstart any Flask project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
+                                </div>
+                                <img class="card-img-top" src="static/images/kanban1.png">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Stock Dash</h5>
+                                <p class="card-text">A dashboard for tracking stock information</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="HideTextHead" style="display: none;">
@@ -218,24 +289,16 @@
         <div class="container">
             <h2 class="text-center text-uppercase text-white">About</h2>
             <hr>
-            <div class="row">
-                <div class="col-lg-4 ml-auto">
-                    <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4 mr-auto">
-                    <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                </div>
-            </div>
             <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="#">
-            <i class="fas fa-download mr-2"></i>
-            Download Now!
-          </a>
+                <p>Developer stuff/python... interested in. I have experience in wide range of testing disiplines.</p><br>
+                <p>I am most passionate about the ways in which technology can change the traditional power relationships between people, often when the technology is quite simple too. This is reflected in my academic background in Politics, although it is very much the emerging technologies and paradigms that my interest is focused on. In nearly every facet of life humans face challenges for which there is little precidence, and for which we need new solutions.</p>
+                <br>
+                <p>[or]Outside of programming I am interested in motorracing/driving, skiing, and football - particularly the analytics</p>
             </div>
         </div>
     </section>
     <!-- Contact Section -->
-    <section class="bg-tertiary" id="contact bg-tertiary">
+    <section class="contact bg-tertiary" id="contact">
         <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
             <hr>
