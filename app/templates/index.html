@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-
     <link href="static/css/portfolio.css" rel="stylesheet">
     <link rel="shortcut icon" href="static/images/favicon.ico">
 </head>
@@ -46,8 +45,7 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center" id="home">
         <div class="container">
-            <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
-            {% for x in projects %}{{ x }}{% endfor %}
+            <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> {% for x in projects %}{{ x }}{% endfor %}
             <h1 class="text-uppercase mb-0">Avatar</h1>
             <p> I'm John Lock, a Developer based in Rotterdam, NL. ...developer stuff/python... interested in. I have experience in wide range of testing disiplines. </p>
             <p>I seek to use the power that software has to help address real world problems. Key to this is a data lead approach along with continuous feedback in all shapes and forms.</p>
@@ -134,7 +132,7 @@
                                     <i class="fas fa-expand-arrows-alt"></i>
                                 </div>
                             </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
+                            <img class="card-img-top" src="static/images/iss-icon.png">
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">ISS Tracker</h5>
@@ -206,22 +204,6 @@
                                 <img class="card-img-top" src="static/images/kanban1.png">
                             </a>
                             <div class="card-body">
-                                <h5 class="card-title">Portfolio</h5>
-                                <p class="card-text">A walkthrough of this portfolio itself, explaining how it works a simple CMS</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                        <i class="fas fa-expand-arrows-alt"></i>
-                                    </div>
-                                </div>
-                                <img class="card-img-top" src="static/images/kanban1.png">
-                            </a>
-                            <div class="card-body">
                                 <h5 class="card-title">A2A</h5>
                                 <p class="card-text">Finding and Tracking good roads to drive</p>
                             </div>
@@ -259,22 +241,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                        <i class="fas fa-expand-arrows-alt"></i>
-                                    </div>
-                                </div>
-                                <img class="card-img-top" src="static/images/kanban1.png">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Stock Dash</h5>
-                                <p class="card-text">A dashboard for tracking stock information</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div id="HideTextHead" style="display: none;">
@@ -288,7 +254,8 @@
             <h2 class="text-center text-uppercase text-white">About</h2>
             <hr>
             <div class="text-center mt-4">
-                <p>Developer stuff/python... interested in. I have experience in wide range of testing disiplines.</p><br>
+                <p>Developer stuff/python... interested in. I have experience in wide range of testing disiplines.</p>
+                <br>
                 <p>I am most passionate about the ways in which technology can change the traditional power relationships between people, often when the technology is quite simple too. This is reflected in my academic background in Politics, although it is very much the emerging technologies and paradigms that my interest is focused on. In nearly every facet of life humans face challenges for which there is little precidence, and for which we need new solutions.</p>
                 <br>
                 <p>[or]Outside of programming I am interested in motorracing/driving, skiing, and football - particularly the analytics</p>
@@ -304,7 +271,7 @@
                 <div class="col-lg-8 mx-auto">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                   <form action="{{ url_for('contact') }}" method="POST" id="contactForm">
+                    <form action="{{ url_for('contact') }}" method="POST" id="contactForm">
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Name</label>
