@@ -7,16 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>John Lock</title>
-    <!-- Bootstrap core CSS -->
     <link href="static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom fonts for this template -->
     <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <!-- Plugin CSS -->
     <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <!-- Custom styles for this template -->
+
     <link href="static/css/portfolio.css" rel="stylesheet">
+    <link rel="shortcut icon" href="static/images/favicon.ico">
 </head>
 
 <body id="page-top">
@@ -306,7 +304,7 @@
                 <div class="col-lg-8 mx-auto">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                   <form action="{{ url_for('contact') }}" method="POST" id="contactForm">
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Name</label>
@@ -324,7 +322,7 @@
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Phone Number</label>
-                                <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                                <input class="form-control" id="phone" type="tel" placeholder="Phone Number (optional)">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
