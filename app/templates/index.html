@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -60,6 +59,7 @@
             <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio Projects</h2>
             <hr>
             <div class="row">
+
                 <div class="col-md-6 col-lg-4">
                     <div class="card" style="width: 18rem;">
                         <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
@@ -140,9 +140,10 @@
                         </div>
                     </div>
                 </div>
+                {% for project in myprojects %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ loop.index }}">
                             <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                                     <p>Click for more info</p>
@@ -151,11 +152,13 @@
                             <img class="card-img-top" src="static/images/kanban1.png">
                         </a>
                         <div class="card-body">
-                            <h5 class="card-title">Finance Tracker</h5>
-                            <p class="card-text">An app to monitor finance and todo tasks for a household</p>
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.card_text}}</p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
+
             </div>
             <div id="ShowTextHead" style="display: block;">
                 <span onclick="ShowHidden();"><i class="fas fa-angle-double-down"></i>  Show more  <i class="fas fa-angle-double-down"></i></span></div>

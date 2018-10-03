@@ -65,7 +65,7 @@ def project_add():
         modal_body=request.form['modal_body'],
         modal_short=request.form['modal_short'],
         modal_tech=request.form['modal_tech'],
-        preview=request.form['preivew'],
+        preview=request.form['preview'],
         github=request.form['github'],
         show=True
         )

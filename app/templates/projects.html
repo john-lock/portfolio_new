@@ -1,4 +1,18 @@
-  <form action="{{ url_for('project_add') }}" method="POST" id="projectForm">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Add new Project
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <form action="{{ url_for('project_add') }}" method="POST" id="projectForm">
     <label>Name</label>
     <input class="form-control" name="name" type="text" placeholder="Name" required="required">
         <label>Card text</label>
@@ -19,6 +33,38 @@
         <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
     </div>
 </form>
+      </div>
+    </div>
+  </div>
+  {% for project in myprojects %}
+    <div class="card">
+    <div class="card-header" id="heading{{ loop.index }}">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+          {{ project.name }}
+        </button>
+      </h5>
+    </div>
+    <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
+      <div class="card-body">
+        ID: {{ project.id }} <br>
+        Visable: {{ project.show }} <br>
+        Card Text: {{ project.card_text }}<br>
+        Modal short: {{ project.modal_short }}<br>
+        Modal body: {{ project.modal_body }}<br>
+        Modal Tech: {{ project.modal_tech }}<br>
+        Preview url: {{ project.preview }}<br>
+        Github: {{ project.github }} <br>
+        
+        <a href="{{ url_for('project_delete', id=project.id) }}">DELETE</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>  
 <hr>
-{% for project in myprojects %}{{ project.id }}{{ project.name}}<br><a href="{{ url_for('project_delete', id=project.id) }}">DELETE</a>
-<hr>{% endfor %}
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
