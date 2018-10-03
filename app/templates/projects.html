@@ -1,41 +1,24 @@
   <form action="{{ url_for('project_add') }}" method="POST" id="projectForm">
-                        
-                        
-                                <label>Name</label>
-                                <input class="form-control" name="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                                <label>Card text</label>
-                                <textarea class="form-control" name="card_text" rows="3" placeholder="Card text" data-validation-required-message="Please enter a message."></textarea>
-                        
-                        
-                        
-                        
-                        
-                                <label>Modal Body</label>
-                                <textarea class="form-control" name="modal_body" rows="5" placeholder="Modal Body" data-validation-required-message="Please enter a message."></textarea>
-                        
-                        
-                        
-                                <label>Modal Short</label>
-                                <textarea class="form-control" name="modal_short" rows="3" placeholder="Modal Short" data-validation-required-message="Please enter a message."></textarea>
-                        
-                                <label>Modal Tech</label>
-                                <textarea class="form-control" name="modal_tech" rows="3" placeholder="Modal Tech" data-validation-required-message="Please enter a message."></textarea>
-                        
-                        <br>
-                        <div id="success"></div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
-                        </div>
-                    </form>
+    <label>Name</label>
+    <input class="form-control" name="name" type="text" placeholder="Name" required="required">
+        <label>Card text</label>
+    <textarea class="form-control" name="card_text" rows="3" placeholder="Card text"></textarea>
+    <label>Modal Body</label>
+    <textarea class="form-control" name="modal_body" rows="5" placeholder="Modal Body"></textarea>
+    <label>Modal Short</label>
+    <textarea class="form-control" name="modal_short" rows="3" placeholder="Modal Short"></textarea>
+    <label>Modal Tech</label>
+    <textarea class="form-control" name="modal_tech" rows="3" placeholder="Modal Tech"></textarea>
+    <label>Live Preview:</label>
+    <input class="form-control" name="preview" type="text" placeholder="Live Preview">
+    <label>Github:</label>
+    <input class="form-control" name="github" type="text" placeholder="Github">
+    <br>
+    <div id="success"></div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+    </div>
+</form>
 <hr>
-{% for project in myprojects %}{{ project.id }}{{ project.name}}<br><a href="{{ url_for('project_delete', id=project.id) }}">DELETE</a><hr>{% endfor %}
+{% for project in myprojects %}{{ project.id }}{{ project.name}}<br><a href="{{ url_for('project_delete', id=project.id) }}">DELETE</a>
+<hr>{% endfor %}
