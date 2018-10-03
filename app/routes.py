@@ -9,6 +9,7 @@ from .forms import LoginForm
 
 app.config['MAIL_SENDGRID_API_KEY'] = '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'
 
+
 @app.route('/')
 @app.route('/index')
 def index():
