@@ -1,5 +1,6 @@
 from app import app
 import sqlite3
+import psycopg2
 from flask_sqlalchemy import SQLAlchemy
 import os
 from flask import Flask
