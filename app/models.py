@@ -42,3 +42,8 @@ class Projects(db.Model):
 
 db.create_all()
 db.session.commit()
+
+admin = User(username='me')
+admin.set_password('jlpass')
+db.session.add(admin)
+db.session.commit()
