@@ -38,3 +38,7 @@ class Projects(db.Model):
     modal_tech = db.Column(db.String(400))
     preview = db.Column(db.String(200))
     github = db.Column(db.String(200))
+
+
+db.create_all()
+db.session.commit()

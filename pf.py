@@ -8,8 +8,5 @@ from flask_login import LoginManager, UserMixin
 
 db = SQLAlchemy(app)
 
-db.init()
-db.create_all()
-
 login_manager = LoginManager()
 login_manager.init_app(app)
