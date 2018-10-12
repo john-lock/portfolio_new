@@ -15,6 +15,8 @@
         <form action="{{ url_for('project_add') }}" method="POST" id="projectForm">
     <label>Name</label>
     <input class="form-control" name="name" type="text" placeholder="Name" required="required">
+    <label>idname</label>
+    <input class="form-control" name="idname" type="text" placeholder="raw">
         <label>Card text</label>
     <textarea class="form-control" name="card_text" rows="3" placeholder="Card text"></textarea>
     <label>Modal Body</label>
@@ -27,6 +29,10 @@
     <input class="form-control" name="preview" type="text" placeholder="Live Preview">
     <label>Github:</label>
     <input class="form-control" name="github" type="text" placeholder="Github">
+    <label>Show: True or False</label>
+    <input class="form-control" name="show" type="text">
+    <label>Top: True or False</label>
+    <input class="form-control" name="top" type="text">    
     <br>
     <div id="success"></div>
     <div class="form-group">
@@ -36,7 +42,7 @@
       </div>
     </div>
   </div>
-  {% for project in myprojects %}
+  {% for project in projects %}
     <div class="card">
     <div class="card-header" id="heading{{ loop.index }}">
       <h5 class="mb-0">
@@ -48,14 +54,16 @@
     <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
       <div class="card-body">
         ID: {{ project.id }} <br>
-        Visable: {{ project.show }} <br>
+        idname {{ project.idname }} <br>
         Card Text: {{ project.card_text }}<br>
         Modal short: {{ project.modal_short }}<br>
         Modal body: {{ project.modal_body }}<br>
         Modal Tech: {{ project.modal_tech }}<br>
         Preview url: {{ project.preview }}<br>
         Github: {{ project.github }} <br>
-        
+        Show: {{ project.show }} <br>
+        Top: {{ project.top }} <br>
+
         <a href="{{ url_for('project_delete', id=project.id) }}">DELETE</a>
       </div>
     </div>

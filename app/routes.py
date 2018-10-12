@@ -11,8 +11,9 @@ from .forms import LoginForm
 @app.route('/')
 @app.route('/index')
 def index():
-    myprojects = Projects.query.filter_by(show=True).all()
-    return render_template('index.html', myprojects=myprojects)
+    myprojects = Projects.query.filter_by(show="True").filter_by(top="True").all()
+    moreprojects = Projects.query.filter_by(show="True").filter_by(top="False").all()
+    return render_template('index.html', myprojects=myprojects, moreprojects=moreprojects)
 
 
 @app.route('/contact', methods=['POST'])
@@ -51,8 +52,8 @@ def login():
 @app.route('/projects')
 @login_required
 def projects():
-    myprojects = Projects.query.filter_by(show=True).all()
-    return render_template('projects.html', myprojects=myprojects)
+    projects = Projects.query.all()
+    return render_template('projects.html', projects=projects)
 
 
 @app.route('/project/add', methods=['POST'])
@@ -67,7 +68,9 @@ def project_add():
         modal_tech=request.form['modal_tech'],
         preview=request.form['preview'],
         github=request.form['github'],
-        show=True
+        show=request.form['show'],
+        top=request.form['top'],
+        idname=request.form['idname'],
         )
         db.session.add(newproject)
         db.session.commit()

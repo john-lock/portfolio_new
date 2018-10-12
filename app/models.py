@@ -30,20 +30,28 @@ def load_user(id):
 class Projects(db.Model):
     __tablename__ = "projects"
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    show = db.Column(db.Boolean, default=True)
+    name = db.Column(db.String(200), nullable=False)
     card_text = db.Column(db.String(400))
     modal_body = db.Column(db.TEXT)
     modal_short = db.Column(db.TEXT)
     modal_tech = db.Column(db.String(400))
     preview = db.Column(db.String(200))
     github = db.Column(db.String(200))
+    show = db.Column(db.String(20))
+    top = db.Column(db.String(20))
+    idname = db.Column(db.String(200))
 
 
 db.create_all()
 db.session.commit()
 
-admin = User(username='me')
-admin.set_password('jlpass')
-db.session.add(admin)
-db.session.commit()
+
+#add admin user if there are no users
+allusers = User.query.all()
+if (len(allusers)) > 0:
+    pass
+else:
+    admin = User(username='me')
+    admin.set_password('jlpass')
+    db.session.add(admin)
+    db.session.commit()

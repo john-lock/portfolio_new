@@ -49,7 +49,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #18BC9C;
+    background-color: #1e4983;
 }
 
 hr.star-dark {
@@ -124,7 +124,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-    color: #18BC9C;
+    color: #1e4983;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active,
@@ -133,7 +133,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-    color: #18BC9C;
+    color: #1e4983;
 }
 
 #mainNav .navbar-toggler {
@@ -158,13 +158,13 @@ section h2 {
     }
     #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
         color: #fff;
-        background: #1895bc;
+        background: #1e4983;
     }
     #mainNav .navbar-nav>li.nav-item>a.nav-link.active:active,
     #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus,
     #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
         color: #fff;
-        background: #1895bc;
+        background: #1e4983;
     }
     #mainNav.navbar-shrink {
         padding-top: 0.5rem;
@@ -224,7 +224,7 @@ header.masthead h2 {
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {
     opacity: 0.8;
-    background-color: #1895bc;
+    background-color: #1e4983;
 }
 
 
@@ -322,7 +322,7 @@ header.masthead h2 {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18BC9C;
+    color: #1e4983;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -332,8 +332,9 @@ form .row:first-child .floating-label-form-group {
 .footer {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: #2C3E50;
+    background-color: #043567;
     color: #fff;
+    background-image: url(../images/bg4.png);
 }
 
 .copyright {
@@ -341,7 +342,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 a {
-    color: #18BC9C;
+    color: #1e4983;
 }
 
 a:focus,
@@ -355,8 +356,9 @@ a:active {
 }
 
 .bg-primary {
+    background-color: #043567;
 
-  background-image: url(../images/mountain_PNG3.png);
+  background-image: url(../images/bg4.png);
 
 }
 
@@ -370,7 +372,7 @@ a:active {
 }
 
 .text-primary {
-    color: #18BC9C !important;
+    color: #1e4983 !important;
 }
 
 .text-secondary {
@@ -378,7 +380,7 @@ a:active {
 }
 
 .btn-primary {
-    background-color: #1895bc;
+    background-color: #1e4983;
 
     }
 
@@ -402,4 +404,13 @@ a:active {
 
 .card {
     margin-bottom: 15px;
+}
+#abouttext {
+    font-size: 18px;
+}
+#ShowTextHead {
+  text-align: center;
+}
+#HideTextHead {
+ text-align: center;
 }

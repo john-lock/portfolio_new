@@ -44,13 +44,18 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center" id="home">
         <div class="container">
-            <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> {% for x in projects %}{{ x }}{% endfor %}
-            <h1 class="text-uppercase mb-0">Avatar</h1>
-            <p> I'm John Lock, a Developer based in Rotterdam, NL. ...developer stuff/python... interested in. I have experience in wide range of testing disiplines. </p>
-            <p>I seek to use the power that software has to help address real world problems. Key to this is a data lead approach along with continuous feedback in all shapes and forms.</p>
-            <p>On this site you can find some example projects of mine, with an explaination and links to the source code. Please feel free to get in touch for any further information or if you have any questions.
+            <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.jpg" alt="">
+
+            <p id="abouttext">I am John Lock, a Back-end Developer based in Rotterdam, NL. <br><br>
+
+I love to utilise the power of software to help address real world problems. Key to this is a methodological approach, focused on ensuring the approach fits the task at hand - usually through continuous feedback in all shapes and forms. <br><br>
+
+On this site you can find some example projects of mine and links to the source code.<br><br>
+
+If you want to grab a coffee or have a talk, I would be very happy to hear from you.
+</p>
                 <hr>
-                <h2 class="font-weight-light mb-0">Development - Testing - Words..</h2>
+               
         </div>
     </header>
     <!-- Portfolio Grid Section -->
@@ -60,86 +65,8 @@
             <hr>
             <div class="row">
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Click for more info</p>
-                                </div>
-                            </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Kanban Board</h5>
-                            <p class="card-text">Track progress of project items, from the backlog to completion</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Click for more info</p>
-                                </div>
-                            </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Sentiment Analyser</h5>
-                            <p class="card-text">Get a positivity/negativity score for any webpage</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Click for more info</p>
-                                </div>
-                            </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Rijks Viewer</h5>
-                            <p class="card-text">Discover a random item from the Rijksmueseum in Amsterdam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Click for more info</p>
-                                </div>
-                            </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Squadbuilder</h5>
-                            <p class="card-text">Create and save football lineups with players from all the top leagues</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Click for more info</p>
-                                </div>
-                            </div>
-                            <img class="card-img-top" src="static/images/iss-icon.png">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">ISS Tracker</h5>
-                            <p class="card-text">A quick app which tracks the International Space Station</p>
-                        </div>
-                    </div>
-                </div>
+               
+                
                 {% for project in myprojects %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card" style="width: 18rem;">
@@ -160,94 +87,42 @@
                 {% endfor %}
 
             </div>
-            <div id="ShowTextHead" style="display: block;">
-                <span onclick="ShowHidden();"><i class="fas fa-angle-double-down"></i>  Show more  <i class="fas fa-angle-double-down"></i></span></div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"><div id="ShowTextHead" style="display: block;">
+                <div onclick="ShowHidden();"><i class="fas fa-angle-double-down"></i>   Show more   <i class="fas fa-angle-double-down"></i></div></div></div>
+                <div class="col"></div>
+
+            </div>
+            
+            
+            
             <div id="HiddenContainer" style="display: none;">
                 <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                        <p>Click for more info</p>
-                                    </div>
+                  {% for project in moreprojects %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ loop.index }}">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <p>Click for more info</p>
                                 </div>
-                                <img class="card-img-top" src="static/images/kanban1.png">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Polity</h5>
-                                <p class="card-text">An applicaiton for voting with integrated feedback to monitor choice satisfaction overtime</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                        <p>Click for more info</p>
-                                    </div>
-                                </div>
-                                <img class="card-img-top" src="static/images/kanban1.png">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Price Tracking Car thing</h5>
-                                <p class="card-text">Blurb</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                        <p>Click for more info</p>
-                                    </div>
-                                </div>
-                                <img class="card-img-top" src="static/images/kanban1.png">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">A2A</h5>
-                                <p class="card-text">Finding and Tracking good roads to drive</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                        <p>Click for more info</p>
-                                    </div>
-                                </div>
-                                <img class="card-img-top" src="static/images/kanban1.png">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Stock Dash</h5>
-                                <p class="card-text">A dashboard for tracking stock information</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-                                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                        <p>Click for more info</p>
-                                    </div>
-                                </div>
-                                <img class="card-img-top" src="static/images/kanban1.png">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Flask Skeleton</h5>
-                                <p class="card-text">A simple script to jumpstart any Flask project</p>
-                            </div>
+                            <img class="card-img-top" src="static/images/kanban1.png">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.card_text}}</p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
+                </div>
             </div>
+
             <div id="HideTextHead" style="display: none;">
-                <span onclick="HideHidden();"><i class="fas fa-angle-double-up"></i>  Hide  <i class="fas fa-angle-double-up"></i> </span></div>
+            <br>
+                <div onclick="HideHidden();" href="#portfolio"><i class="fas fa-angle-double-up"></i>  Hide  <i class="fas fa-angle-double-up"></i> </div></div>
         </div>
         </div>
     </section>
@@ -256,13 +131,44 @@
         <div class="container">
             <h2 class="text-center text-uppercase text-white">About</h2>
             <hr>
-            <div class="text-center mt-4">
-                <p>Developer stuff/python... interested in. I have experience in wide range of testing disiplines.</p>
-                <br>
-                <p>I am most passionate about the ways in which technology can change the traditional power relationships between people, often when the technology is quite simple too. This is reflected in my academic background in Politics, although it is very much the emerging technologies and paradigms that my interest is focused on. In nearly every facet of life humans face challenges for which there is little precidence, and for which we need new solutions.</p>
-                <br>
-                <p>[or]Outside of programming I am interested in motorracing/driving, skiing, and football - particularly the analytics</p>
+            <div class="text-center mt-4" id="abouttext">
+
+                I am a developer with experience in a number of different types of development; Web Development, API Design, Data Analysis, Monitoring, Testing as well as development methodologies & practices like Devops, Agile and SCRUM. <br><br>
+
+                I have experience as a Test Manager and a Junior Devops Engineer, both of which influence my own software development both in terms of in the lines of code writen as well as having a holistic view of applications and how they can best provide a solution for a given problem. <br><br>
+
+                I generally use Python, but I also use Javascript... <br><br>
+
+                </div>
+
+<hr>
+<div class="row">
+                
+                <div class="col"><div id="ShowTextHead" style="display: block;">
+                 <h4 class="text-uppercase mb-4">Further Links</h4>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="mailto:john@johnlock.nl">
+                  <i class="far fa-envelope"></i>
+                </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/john-lock/">
+                  <i class="fab fa-fw fa-github"></i>
+                </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/jonathanarthurlock/">
+                  <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+                        </li>
+                    </ul></div>
+                <div class="col"></div>
+
             </div>
+
+                   
+                
         </div>
     </section>
     <!-- Contact Section -->
@@ -314,42 +220,11 @@
         </div>
     </section>
     <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-5 mb-lg-0">
-                </div>
-                <div class="col-md-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Further Links</h4>
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="mailto:john@johnlock.nl">
-                  <i class="far fa-envelope"></i>
-                </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-github"></i>
-                </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-linkedin-in"></i>
-                </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                </div>
-            </div>
-        </div>
-    </footer>
     <div class="copyright py-4 text-center text-white">
         <div class="container">
             <small> John Lock 2018</small>
         </div>
     </div>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">
         <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
         <i class="fa fa-chevron-up"></i>
@@ -379,6 +254,7 @@ function HideHidden() {
     document.getElementById("HiddenContainer").style.display = "none";
     document.getElementById("HideTextHead").style.display = "none";
     document.getElementById("ShowTextHead").style.display = "block";
+    document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start"});
 }
 </script>
 
