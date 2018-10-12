@@ -46,12 +46,12 @@ db.create_all()
 db.session.commit()
 
 
-#add admin user if there are no users
+# add admin user if there are no users
 allusers = User.query.all()
 if (len(allusers)) > 0:
     pass
 else:
     admin = User(username='me')
-    admin.set_password('jlpass')
+    admin.set_password(ADMIN_PW)
     db.session.add(admin)
     db.session.commit()

@@ -414,3 +414,6 @@ a:active {
 #HideTextHead {
  text-align: center;
 }
+#pic_frame {
+  text-align: -webkit-center;
+}
