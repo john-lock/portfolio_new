@@ -12,20 +12,23 @@
                     <div class="w3-content w3-display-container" id="pic_frame">
                         <img class="mySlides" src="static/images/{{ project.idname}}1.png" style="width:60%">
                         <img class="mySlides" src="static/images/{{ project.idname}}2.png" style="width:60%">
+                        <img class="mySlides" src="static/images/{{ project.idname}}3.png" style="width:60%">
+                        <img class="mySlides" src="static/images/{{ project.idname}}4.png" style="width:60%">
                         <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                         <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
                     </div>
-                    {{ project.modal_body }}
                     <hr>
+                    <p>{{ project.modal_body }}</p>
+                    <hr>
+                    <p id="modal_tech">{{ project.modal_tech}}</p>
+                    <br>
                     <a class="btn btn-primary btn-lg rounded-pill portfolio-modal" target="_blank" rel="noopener noreferrer" href="{{ project.github }}">
                 <i class="fa fa-close"></i>
                 Github</a>
                     <a class="btn btn-primary btn-lg rounded-pill portfolio-modal" target="_blank" rel="noopener noreferrer" href="{{ project.preview }}">
                 <i class="fa fa-close"></i>
                 Live Demo</a>
-                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
+                    
                 </div>
             </div>
         </div>
