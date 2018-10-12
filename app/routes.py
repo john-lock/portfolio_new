@@ -13,7 +13,11 @@ from .forms import LoginForm
 def index():
     myprojects = Projects.query.filter_by(show="True").filter_by(top="True").all()
     moreprojects = Projects.query.filter_by(show="True").filter_by(top="False").all()
-    return render_template('index.html', myprojects=myprojects, moreprojects=moreprojects)
+    allprojects = Projects.query.all()
+    return render_template('index.html',
+                           myprojects=myprojects,
+                           moreprojects=moreprojects,
+                           allprojects=allprojects)
 
 
 @app.route('/contact', methods=['POST'])
@@ -48,7 +52,6 @@ def login():
     return render_template('login.html', form=form)
 
 
-
 @app.route('/projects')
 @login_required
 def projects():
@@ -60,18 +63,16 @@ def projects():
 @login_required
 def project_add():
     if request.method == 'POST':
-        newproject = Projects(
-        name=request.form['name'],
-        card_text=request.form['card_text'],
-        modal_body=request.form['modal_body'],
-        modal_short=request.form['modal_short'],
-        modal_tech=request.form['modal_tech'],
-        preview=request.form['preview'],
-        github=request.form['github'],
-        show=request.form['show'],
-        top=request.form['top'],
-        idname=request.form['idname'],
-        )
+        newproject = Projects(name=request.form['name'],
+                              idname=request.form['idname'],
+                              card_text=request.form['card_text'],
+                              modal_body=request.form['modal_body'],
+                              modal_short=request.form['modal_short'],
+                              modal_tech=request.form['modal_tech'],
+                              preview=request.form['preview'],
+                              github=request.form['github'],
+                              show=request.form['show'],
+                              top=request.form['top'])
         db.session.add(newproject)
         db.session.commit()
     return redirect('projects')
@@ -85,3 +86,10 @@ def project_delete(id):
         db.session.delete(project)
         db.session.commit()
     return redirect('projects')
+
+
+@app.route('/projects/list')
+@login_required
+def projects_list():
+    projects = Projects.query.all()
+    return render_template('project_list.html', projects=projects)

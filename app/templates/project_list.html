@@ -1,0 +1,15 @@
+{% for project in projects %}
+#: {{ loop.index }}<br>
+id: {{ project.id }}<br>
+name: {{ project.name }}<br>
+idname: {{ project.idname }}<br>
+card_text: {{ project.card_text }}<br>
+modal_body: {{ project.modal_body }}<br>
+modal_short: {{ project.modal_short }}<br>
+modal_tech: {{ project.modal_tech }}<br>
+preview: {{ project.preview }}<br>
+github: {{ project.github }}<br>
+show: {{ project.show }}<br>
+top: {{ project.top }}<br>
+<hr>
+{% endfor %}

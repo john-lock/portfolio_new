@@ -70,13 +70,13 @@ If you want to grab a coffee or have a talk, I would be very happy to hear from 
                 {% for project in myprojects %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ loop.index }}">
+                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ project.idname }}">
                             <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                                     <p>Click for more info</p>
                                 </div>
                             </div>
-                            <img class="card-img-top" src="static/images/kanban1.png">
+                            <img class="card-img-top" src="static/images/{{ project.idname}}_icon.png">
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">{{ project.name }}</h5>
@@ -102,7 +102,7 @@ If you want to grab a coffee or have a talk, I would be very happy to hear from 
                   {% for project in moreprojects %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ loop.index }}">
+                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ project.idname }}">
                             <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                                     <p>Click for more info</p>
@@ -137,9 +137,7 @@ If you want to grab a coffee or have a talk, I would be very happy to hear from 
 
                 I have experience as a Test Manager and a Junior Devops Engineer, both of which influence my own software development both in terms of in the lines of code writen as well as having a holistic view of applications and how they can best provide a solution for a given problem. <br><br>
 
-                I generally use Python, but I also use Javascript... <br><br>
-
-                </div>
+                                </div>
 
 <hr>
 <div class="row">

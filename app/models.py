@@ -31,6 +31,7 @@ class Projects(db.Model):
     __tablename__ = "projects"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(200), nullable=False)
+    idname = db.Column(db.String(200))
     card_text = db.Column(db.String(400))
     modal_body = db.Column(db.TEXT)
     modal_short = db.Column(db.TEXT)
@@ -39,7 +40,6 @@ class Projects(db.Model):
     github = db.Column(db.String(200))
     show = db.Column(db.String(20))
     top = db.Column(db.String(20))
-    idname = db.Column(db.String(200))
 
 
 db.create_all()
