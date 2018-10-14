@@ -6,6 +6,7 @@ from flask_login import LoginManager, UserMixin
 from app import db, login
 from werkzeug.security import generate_password_hash, check_password_hash
 
+ADMIN_PW = os.environ['ADMIN_PW']
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
