@@ -59,10 +59,10 @@ def projects():
     return render_template('projects.html', projects=projects)
 
 
-@app.route('/project/add', methods=['POST'])
+@app.route('/project/add', methods=['GET'])
 @login_required
 def project_add():
-    if request.method == 'POST':
+    if request.method == 'GET':
         newproject = Projects(name=request.form['name'],
                               idname=request.form['idname'],
                               card_text=request.form['card_text'],
@@ -78,14 +78,34 @@ def project_add():
     return redirect('projects')
 
 
-@app.route('/projects/delete/<id>', methods=['GET'])
+@app.route('/projects/delete/<id>', methods=['POST'])
 @login_required
 def project_delete(id):
-    if request.method == 'GET':
+    if request.method == 'POST':
         project = Projects.query.filter_by(id=id).first()
         db.session.delete(project)
         db.session.commit()
     return redirect('projects')
+
+
+@app.route('/projects/edit/<id>', methods=['GET', 'POST'])
+@login_required
+def edit_project(id):
+        project = Projects.query.filter_by(id=id).first()
+        if request.method == 'GET':
+            return render_template('edit_project.html', project=project)
+
+        project.card_text = request.form['card_text']
+        project.modal_body = request.form['modal_body']
+        project.modal_short = request.form['modal_short']
+        project.modal_tech = request.form['modal_tech']
+        project.preview = request.form['preview']
+        project.github = request.form['github']
+        project.show = request.form['show']
+        project.top = request.form['top']
+
+        db.session.commit()
+        return redirect(url_for('projects'))
 
 
 @app.route('/projects/list')

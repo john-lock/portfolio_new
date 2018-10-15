@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">      Edit {{ project.name }}
+<hr>
+      <form method="POST">
+    <label>Name</label>
+    <input class="form-control" name="name" type="text" placeholder="Name" value="{{ project.name }}" required="required">
+    <br>
+    <label>idname</label>
+    <input class="form-control" name="idname" type="text" placeholder="raw" value="{{ project.idname }}">
+    <br>
+        <label>Card text</label>
+    <textarea class="form-control" name="card_text" rows="5" placeholder="Card text">{{ project.card_text}}</textarea>
+    <br>
+    <label>Modal Body</label>
+    <textarea class="form-control" name="modal_body" rows="10" placeholder="Modal Body">{{ project.modal_body }}</textarea>
+    <br>
+    <label>Modal Short</label>
+    <textarea class="form-control" name="modal_short" rows="3" placeholder="Modal Short">{{ project.short }}</textarea>
+    <br>
+    <label>Modal Tech</label>
+    <textarea class="form-control" name="modal_tech" rows="3" placeholder="Modal Tech">{{ project.modal_tech }}</textarea>
+    <br>
+    <label>Live Preview:</label>
+    <input class="form-control" name="preview" type="text" value="{{ project.preview }}">
+<br>
+    <label>Github:</label>
+    <input class="form-control" name="github" type="text" value="{{ project.github }}">
+    <br>
+    <label>Show: True or False</label>
+    <input class="form-control" name="show" type="text" value="{{ project.show }}">
+    <br>
+    <label>Top: True or False</label>
+    <input class="form-control" name="top" type="text" value="{{ project.top }}">
+    <br>
+    <br>
+    <div id="success"></div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary submit-btn" id="sendMessageButton">Update</button>
+    </div>
+</form>
+</div>
+{% endblock %}

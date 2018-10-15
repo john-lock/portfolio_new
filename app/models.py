@@ -1,12 +1,13 @@
 from app import app
-import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 import os
 from flask_login import LoginManager, UserMixin
 from app import db, login
 from werkzeug.security import generate_password_hash, check_password_hash
 
-ADMIN_PW = os.environ['ADMIN_PW']
+admin_user = os.environ['admin_user']
+admin_pw = os.environ['admin_pw']
+
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -52,7 +53,7 @@ allusers = User.query.all()
 if (len(allusers)) > 0:
     pass
 else:
-    admin = User(username='me')
-    admin.set_password(ADMIN_PW)
+    admin = User(admin_user)
+    admin.set_password(admin_pw)
     db.session.add(admin)
     db.session.commit()
