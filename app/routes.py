@@ -59,10 +59,10 @@ def projects():
     return render_template('projects.html', projects=projects)
 
 
-@app.route('/project/add', methods=['GET'])
+@app.route('/project/add', methods=['POST'])
 @login_required
 def project_add():
-    if request.method == 'GET':
+    if request.method == 'POST':
         newproject = Projects(name=request.form['name'],
                               idname=request.form['idname'],
                               card_text=request.form['card_text'],

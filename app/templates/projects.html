@@ -12,7 +12,7 @@
         </div>
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-                <form action="{{ url_for('project_add') }}" method="GET" id="projectForm">
+                <form action="{{ url_for('project_add') }}" method="POST" id="projectForm">
                     <label>Name</label>
                     <input class="form-control" name="name" type="text" placeholder="Name" required="required">
                     <label>idname</label>
