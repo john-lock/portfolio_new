@@ -9,26 +9,13 @@
                 <div class="col-lg-8 mx-auto">
                     <h2 class="text-secondary text-uppercase mb-0">{{ project.name }}</h2>
                     <hr class="star-dark mb-5">
-                    {% if project.imagesmore %}
                     <div class="w3-content w3-display-container" id="pic_frame">
-                        <img class="mySlidesMore" src="static/images/{{ project.idname}}1.png" style="width:60%">
-                        <img class="mySlidesMore" src="static/images/{{ project.idname}}2.png" style="width:60%">
-                        <img class="mySlidesMore" src="static/images/{{ project.idname}}3.png" style="width:60%">
-                        <img class="mySlidesMore" src="static/images/{{ project.idname}}4.png" style="width:60%">
-                        <button class="w3-button w3-black w3-display-left" onclick="plusDivsMore(-1)">&#10094;</button>
-                        <button class="w3-button w3-black w3-display-right" onclick="plusDivsMore(1)">&#10095;</button>
-                            </div>
-                        {% elif project.images %}
-                        <div class="w3-content w3-display-container" id="pic_frame">
+                        
                         <img class="mySlides" src="static/images/{{ project.idname}}1.png" style="width:60%">
                         <img class="mySlides" src="static/images/{{ project.idname}}2.png" style="width:60%">
                         <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                         <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-                        
-                </div>
-                        
-                        {% endif %}
-                    
+                    </div>
                     <hr>
                     <p>{{ project.modal_body|safe }}</p>
                     <hr>
@@ -47,7 +34,6 @@
     </div>
 </div>
 {% endfor %}
-
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -59,20 +45,6 @@ function plusDivs(n) {
 function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = x.length }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex - 1].style.display = "block";
-}
-function plusDivsMore(n){
-    showDivsMore(slideIndex += n);
-}
-
-function showDivsMore(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlidesMore");
     if (n > x.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = x.length }
     for (i = 0; i < x.length; i++) {
