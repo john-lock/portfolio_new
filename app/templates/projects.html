@@ -33,6 +33,10 @@
                     <input class="form-control" name="show" type="text">
                     <label>Top: True or False</label>
                     <input class="form-control" name="top" type="text">
+                    <label>Images</label>
+                    <input class="form-control" name="images" type="text">
+                    <label>Imagesmore</label>
+                    <input class="form-control" name="imagesmore" type="text">
                     <br>
                     <div id="success"></div>
                     <div class="form-group">
@@ -62,6 +66,8 @@
                 Github: {{ project.github }} <br>
                 Show: {{ project.show }} <br>
                 Top: {{ project.top }} <br>
+                Images: {{ project.images }} <br>
+                Imagesmore: {{ project.imagesmore }} <br>
 
                 
                 <a href="{{ url_for('project_delete', id=project.id) }}">DELETE</a> // <a href="/projects/edit/{{ project.id }}"><span>Edit</span></a>

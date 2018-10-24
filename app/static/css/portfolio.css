@@ -405,6 +405,10 @@ a:active {
 .card {
     margin-bottom: 15px;
 }
+.card-img-top {
+    width: 140px;
+    margin-top:10px; 
+}
 #abouttext {
     font-size: 18px;
 }

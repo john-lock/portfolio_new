@@ -72,16 +72,18 @@ def project_add():
                               preview=request.form['preview'],
                               github=request.form['github'],
                               show=request.form['show'],
-                              top=request.form['top'])
+                              top=request.form['top'],
+                              images=request.form['images'],
+                              imagesmore=request.form['imagesmore'])
         db.session.add(newproject)
         db.session.commit()
     return redirect('projects')
 
 
-@app.route('/projects/delete/<id>', methods=['POST'])
+@app.route('/projects/delete/<id>', methods=['GET'])
 @login_required
 def project_delete(id):
-    if request.method == 'POST':
+    if request.method == 'GET':
         project = Projects.query.filter_by(id=id).first()
         db.session.delete(project)
         db.session.commit()
@@ -103,6 +105,8 @@ def edit_project(id):
         project.github = request.form['github']
         project.show = request.form['show']
         project.top = request.form['top']
+        project.images = request.form['images']
+        project.imagesmore = request.form['imagesmore']
 
         db.session.commit()
         return redirect(url_for('projects'))
