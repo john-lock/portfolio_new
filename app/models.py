@@ -42,8 +42,7 @@ class Projects(db.Model):
     github = db.Column(db.String(200))
     show = db.Column(db.String(20))
     top = db.Column(db.String(20))
-    images = db.Column(db.TEXT)
-    imagesmore = db.Column(db.TEXT)
+    images = db.Column(db.Integer)
 
 
 db.create_all()
