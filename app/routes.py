@@ -74,7 +74,7 @@ def project_add():
                               show=request.form['show'],
                               top=request.form['top'],
                               images=request.form['images'],
-                              imagesmore=request.form['imagesmore'])
+                              )
         db.session.add(newproject)
         db.session.commit()
     return redirect('projects')
