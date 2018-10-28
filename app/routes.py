@@ -97,6 +97,7 @@ def edit_project(id):
         if request.method == 'GET':
             return render_template('edit_project.html', project=project)
 
+        project.idname = request.form['idname']
         project.card_text = request.form['card_text']
         project.modal_body = request.form['modal_body']
         project.modal_short = request.form['modal_short']
