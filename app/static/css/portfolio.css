@@ -441,3 +441,7 @@ a:active {
     max-height: 460px;
     max-width: 460px;
 }
+#profilepic {
+    height: 210px;
+    width: 160px;
+}
