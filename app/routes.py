@@ -13,7 +13,7 @@ from .forms import LoginForm
 def index():
     myprojects = Projects.query.filter_by(show="True").filter_by(top="True").all()
     moreprojects = Projects.query.filter_by(show="True").filter_by(top="False").all()
-    allprojects = Projects.query.all()
+    allprojects = Projects.query.filter_by(show="True").all()
     return render_template('index.html',
                            myprojects=myprojects,
                            moreprojects=moreprojects,
