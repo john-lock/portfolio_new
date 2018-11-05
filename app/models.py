@@ -5,8 +5,8 @@ from flask_login import LoginManager, UserMixin
 from app import db, login
 from werkzeug.security import generate_password_hash, check_password_hash
 
-admin_user = os.environ['admin_user']
-admin_pw = os.environ['admin_pw']
+admin_user = os.environ["admin_user"]
+admin_pw = os.environ["admin_pw"]
 
 
 class User(UserMixin, db.Model):
@@ -15,7 +15,7 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(128))
 
     def __repr__(self):
-        return '<User {}>'.format(self.username)
+        return "<User {}>".format(self.username)
 
     def set_password(self, password):
         self.password = generate_password_hash(password)

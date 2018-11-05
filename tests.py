@@ -8,7 +8,7 @@ from flask_login import LoginManager
 
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'sqlite://'
+    SQLALCHEMY_DATABASE_URI = "sqlite://"
 
 
 class UserModel(unittest.TestCase):
@@ -23,13 +23,13 @@ class UserModel(unittest.TestCase):
         db.drop_all()
 
     def test_password(self):
-        u = User(username='jason')
-        u.set_password('bigpass')
-        self.assertFalse(u.check_password('small'))
-        self.assertTues(u.check_password('bigpass'))
+        u = User(username="jason")
+        u.set_password("bigpass")
+        self.assertFalse(u.check_password("small"))
+        self.assertTues(u.check_password("bigpass"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main(verbosity=2)
 
 
