@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,17 +46,12 @@
     <header class="masthead bg-primary text-white text-center" id="home">
         <div class="container">
             <img class="img-fluid mb-5 d-block mx-auto" id="profilepic" src="static/images/profilepic.png" alt="Profilepic">
-
-            <p id="abouttext">I am John Lock, a Back-end Developer based in Rotterdam, NL. <br><br>
-
-I love to utilise the power of software to help address real world problems. Key to this is a methodological approach, focused on ensuring the approach fits the task at hand - usually through continuous feedback in all shapes and forms. <br><br>
-
-On this site you can find some example projects of mine and links to the source code.<br><br>
-
-If you want to grab a coffee or have a talk, I would be very happy to hear from you.
-</p>
-                <hr>
-               
+            <p id="abouttext">I am John Lock, a developer focused on Automation and Backend developement, based in Rotterdam, NL. <br><br>
+                I love to utilise the power of software to help address real world problems. Key to this is a methodological approach, focused on ensuring the approach fits the task at hand - usually through continuous feedback in all shapes and forms. <br><br>
+                On this site you can find some example projects of mine and links to the source code.<br><br>
+                If you want to grab a coffee or have a talk, I would be very happy to hear from you.
+            </p>
+            <hr>
         </div>
     </header>
     <!-- Portfolio Grid Section -->
@@ -83,22 +79,23 @@ If you want to grab a coffee or have a talk, I would be very happy to hear from 
                 </div>
                 {% endfor %}
             </div>
-            
             {% if moreprojects %}
             <div class="row">
                 <div class="col"></div>
-                <div class="col"><div id="ShowTextHead" style="display: block;">
-                <div onclick="ShowHidden();"><i class="fas fa-angle-double-down"></i>   Show more   <i class="fas fa-angle-double-down"></i></div></div></div>
+                <div class="col">
+                    <div id="ShowTextHead" style="display: block;">
+                        <div onclick="ShowHidden();"><i class="fas fa-angle-double-down"></i> Show more <i class="fas fa-angle-double-down"></i></div>
+                    </div>
+                </div>
                 <div class="col"></div>
             </div>
             {% endif %}
-             
             <div id="HiddenContainer" style="display: none;">
                 <div class="row">
-                  {% for project in moreprojects %}
-                <div class="col-md-6 col-lg-4">
-                    <div class="card" style="width: 18rem;">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ project.idname }}">
+                    {% for project in moreprojects %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ project.idname }}">
                             <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                                     <p>Click for more info</p>
@@ -106,19 +103,19 @@ If you want to grab a coffee or have a talk, I would be very happy to hear from 
                             </div>
                             <img class="card-img-top" src="static/images/{{ project.idname }}_icon.png">
                         </a>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ project.name }}</h5>
-                            <p class="card-text">{{ project.card_text}}</p>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.name }}</h5>
+                                <p class="card-text">{{ project.card_text}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
-
             <div id="HideTextHead" style="display: none;">
-            <br>
-                <div onclick="HideHidden();" href="#portfolio"><i class="fas fa-angle-double-up"></i>  Hide  <i class="fas fa-angle-double-up"></i> </div></div>
+                <br>
+                <div onclick="HideHidden();" href="#portfolio"><i class="fas fa-angle-double-up"></i> Hide <i class="fas fa-angle-double-up"></i> </div>
+            </div>
         </div>
         </div>
     </section>
@@ -128,39 +125,39 @@ If you want to grab a coffee or have a talk, I would be very happy to hear from 
             <h2 class="text-center text-uppercase text-white">About</h2>
             <hr>
             <div class="text-center mt-4" id="abouttext">
-                I am a developer with experience in a number of different types of development; Web Development, API Design, Data Analysis, Monitoring, Testing as well as development methodologies & practices like Devops, Agile and SCRUM. <br><br>
-
-                I have experience as a Test Manager and a Junior Devops Engineer, both of which influence my own software development both in terms of in the lines of code writen as well as having a holistic view of applications and how they can best provide a solution for a given problem. <br><br>
-
+                I've held position of Test Manager and Software Developer both of which influence my own software development both in terms of in the lines of code written as well as having a holistic view of applications and how they can best provide a solution for a given problem. 
+                <br><br>
+                I have experience in a number of different types of development; Web Development, API Design, Data Analysis, Monitoring, as well as development methodologies & practices like Devops, Agile and SCRUM. 
+                <br><br>
+                I am keen to apply my experiences and deeper my experience in the area of automation and engineering work on the operations side including Test Automation and Continuous Integration & Continuous Deployment.
+                <br>
             </div>
             <hr>
             <div class="row">
-            <div class="col"><div id="ShowTextHead" style="display: block;">
-                 <h4 class="text-uppercase mb-4">Further Links</h4>
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="mailto:john@johnlock.nl">
+                <div class="col">
+                    <div id="ShowTextHead" style="display: block;">
+                        <h4 class="text-uppercase mb-4">Further Links</h4>
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="mailto:john@johnlock.nl">
                   <i class="far fa-envelope"></i>
                 </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/john-lock/">
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/john-lock/">
                   <i class="fab fa-fw fa-github"></i>
                 </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/jonathanarthurlock/">
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/jonathanarthurlock/">
                   <i class="fab fa-fw fa-linkedin-in"></i>
                 </a>
-                        </li>
-                    </ul></div>
-                <div class="col"></div>
-
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col"></div>
+                </div>
             </div>
-
-                   
-                
-        </div>
     </section>
     <!-- Contact Section -->
     <section class="contact bg-tertiary" id="contact">
@@ -244,7 +241,7 @@ function HideHidden() {
     document.getElementById("HiddenContainer").style.display = "none";
     document.getElementById("HideTextHead").style.display = "none";
     document.getElementById("ShowTextHead").style.display = "block";
-    document.getElementById("portfolio").scrollIntoView({behavior: "smooth", block: "start"});
+    document.getElementById("portfolio").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 </script>
 
