@@ -109,6 +109,7 @@ def edit_project(id):
     if request.method == "GET":
         return render_template("edit_project.html", project=project)
 
+    project.name = request.form["name"]
     project.idname = request.form["idname"]
     project.card_text = request.form["card_text"]
     project.modal_body = request.form["modal_body"]
@@ -119,7 +120,6 @@ def edit_project(id):
     project.show = request.form["show"]
     project.top = request.form["top"]
     project.images = request.form["images"]
-    project.imagesmore = request.form["imagesmore"]
 
     db.session.commit()
     return redirect(url_for("projects"))

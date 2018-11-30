@@ -11,8 +11,21 @@
                     <hr class="star-dark mb-5">
 
 
+{% if 'guide' in project.modal_short %}
 
 
+<hr>
+                    <p>{{ project.modal_body|safe }}</p>
+                    <hr>
+                    <p id="modal_tech">{{ project.modal_tech}}</p>
+                    <br>
+                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal" target="_blank" rel="noopener noreferrer" href="{{ project.github }}">
+                <i class="fa fa-close"></i>
+                Github</a>
+
+              </div>
+
+{% else %}
 
 <div id="images{{ project.id }}" class="carousel slide" data-ride="carousel">
 
@@ -60,6 +73,7 @@
                 Live Demo</a>
                     
                 </div>
+{% endif %}
             </div>
         </div>
     </div>
