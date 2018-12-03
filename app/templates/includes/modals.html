@@ -39,13 +39,13 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="static/images/{{ project.idname}}1.png" alt="{{ project.name }}" id="carousel-img">
+      <img src="static/images/{{ project.idname }}1.png" alt="{{ project.name }}" id="carousel-img">
     </div>
     <div class="carousel-item">
-      <img src="static/images/{{ project.idname}}2.png" alt="{{ project.name }}" id="carousel-img">
+      <img src="static/images/{{ project.idname }}2.png" alt="{{ project.name }}" id="carousel-img">
     </div>
     <div class="carousel-item">
-      <img src="static/images/{{ project.idname}}3.png" alt="{{ project.name }}" id="carousel-img">
+      <img src="static/images/{{ project.idname }}3.png" alt="{{ project.name }}" id="carousel-img">
     </div>
   </div>
 
@@ -65,13 +65,16 @@
                     <hr>
                     <p id="modal_tech">{{ project.modal_tech}}</p>
                     <br>
+                    {% if project.github %}
                     <a class="btn btn-primary btn-lg rounded-pill portfolio-modal" target="_blank" rel="noopener noreferrer" href="{{ project.github }}">
                 <i class="fa fa-close"></i>
                 Github</a>
+                {% endif %}
+                {% if project.preview %}
                     <a class="btn btn-primary btn-lg rounded-pill portfolio-modal" target="_blank" rel="noopener noreferrer" href="{{ project.preview }}">
                 <i class="fa fa-close"></i>
                 Live Demo</a>
-                    
+                    {% endif %}
                 </div>
 {% endif %}
             </div>
